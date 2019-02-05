@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "foo-bar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "postinstall": "node ./scripts/postinstall.js",
+    "prepare": "npm run package",
+    "package": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "is-electron": "^2.2.0"
+  },
+  "devDependencies": {
+    "shelljs": "^0.8.3",
+    "electron-builder": "^20.36.2"
+  },
+  "build": {
+    "files": [
+      "app/**/*",
+      "lib/**/*"
+    ],
+    "asar": false,
+    "publish": null
+  }
+}
